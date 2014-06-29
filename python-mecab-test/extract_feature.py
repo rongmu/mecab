@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 # coding: utf-8
 
 csv = "名詞,非自立,副詞可能,*,*,*,うち,ウチ,ウチ"
