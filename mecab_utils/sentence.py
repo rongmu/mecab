@@ -95,7 +95,7 @@ if __name__ == '__main__':
 
     s = Sentence(u"私は日本語を勉強しています。")
 
-    print s.raw
+    print s
     
     res  = s.find(u"勉強")
     print res.prev, res, res.next
