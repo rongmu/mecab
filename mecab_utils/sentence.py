@@ -39,7 +39,7 @@ class Sentence:
     tagger.parse(u"こんにちは、めかぶ".encode(mecab_code))
 
     def __init__(self, raw_sentence):
-        self.raw = raw_sentence
+        self.raw = raw_sentence.rstrip()
         self.nodes = []
         self.nodes_size = 0
 
