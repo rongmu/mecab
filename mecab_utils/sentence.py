@@ -26,6 +26,9 @@ class Node:
         self.surface = surface
         self.set_features(features)
 
+    def __str__(self):
+        return self.surface.encode(mecab_code)
+
     def set_features(self, features_csv):
         for feature, value in \
                 zip(Node.feature_list, features_csv.split(",")):
@@ -41,6 +44,9 @@ class Sentence:
         self.nodes_size = 0
 
         self.parse()
+
+    def __str__(self):
+        return self.raw.encode(mecab_code)
 
     def parse(self):
         self.nodes = []
@@ -92,4 +98,4 @@ if __name__ == '__main__':
     print s.raw
     
     res  = s.find(u"勉強")
-    print res.prev.surface, res.surface, res.next.surface
+    print res.prev, res, res.next
